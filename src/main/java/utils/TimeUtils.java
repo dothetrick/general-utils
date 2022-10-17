@@ -13,9 +13,8 @@ public class TimeUtils {
      *
      * @return
      */
-    public static Integer getCurrentSecondTime() {
-        LocalDateTime localDateTime = LocalDateTime.now();
-        return localDateTime.getSecond();
+    public static Long getCurrentSecondTime() {
+        return LocalDateTime.now().toEpochSecond(ZoneOffset.of("+8"));
     }
 
     /**
